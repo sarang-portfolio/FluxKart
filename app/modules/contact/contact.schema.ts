@@ -1,9 +1,15 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../../utility/sequelize";
+import { IContact } from "./contact.types";
 
-export const contactModel = sequelize.define(
+export const contactModel = sequelize.define<IContact>(
   "Contact",
   {
+    id: {
+      primaryKey: true,
+      type: DataTypes.INTEGER.UNSIGNED,
+      autoIncrement: true,
+    },
     phoneNumber: {
       type: DataTypes.STRING,
       allowNull: false,

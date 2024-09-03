@@ -9,7 +9,6 @@ export const registerRoutes = (app: Application) => {
   app.use(cors());
   app.use(json());
 
-
   for (let route of routes) {
     app.use(route.path, route.router);
   }
