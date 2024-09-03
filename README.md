@@ -1,4 +1,4 @@
-# FluxKart
+# FluxKart 🛒
 
 FluxKart is a Node.js-based backend service designed to identify and track customer identities across multiple purchases. The service uses Express.js, TypeScript, PostgreSQL, and Sequelize as its primary technology stack.
 
