@@ -1,8 +1,12 @@
+import { CONTACT_CONSTANTS } from "./contact.constants";
 import contactRepo from "./contact.repo";
 import { IContact } from "./contact.types";
 
 const identifyUser = async (email?: string, phoneNumber?: string) => {
   try {
+    if (!email && !phoneNumber) {
+      throw CONTACT_CONSTANTS.MISSING_CONTACT_INFO;
+    }
     // Fetch contacts with matching email or phoneNumber
     const users: IContact[] = await contactRepo.getOneContact(
       email,

@@ -21,17 +21,12 @@ const getOneContact = (
   });
 };
 
-const getPrimaryContact = (id: number): Promise<IContact | null> =>
-  contactModel.findOne({ where: { id: id }, raw: true });
-
 const update = (
   id: number,
   updateContactDto: IUpdateContactDto
 ): Promise<[affectedCount: number]> =>
   contactModel.update(
     {
-      // linkPrecedence: updateContactDto.linkPrecedence,
-      // linkedId: updateContactDto.olderPrimaryUserId,
       ...updateContactDto,
     },
     { where: { id: id } }
@@ -41,6 +36,5 @@ export default {
   create,
   getAll,
   getOneContact,
-  getPrimaryContact,
   update,
 };
