@@ -12,5 +12,11 @@ export const sequelize = new Sequelize(
     host: HOST,
     port: Number(DB_PORT),
     dialect: (DIALECT as Dialect) || "postgres",
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false, // Only for testing purposes for this project
+      },
+    },
   }
 );
