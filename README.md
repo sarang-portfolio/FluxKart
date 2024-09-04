@@ -98,3 +98,13 @@ The service will return a JSON response similar to the following:
     "secondaryUserIds": [23]
 }
 ```
+
+### Swagger Documentation
+
+To explore the API using Swagger:
+
+- **When running locally:** Use [http://localhost:PORT/fluxkart/docs](http://localhost:PORT/fluxkart/docs). Replace `PORT` with the actual port number defined in your `.env.dev` file.
+- **When using the deployed server:** Use the direct link [https://your-deployed-domain.com/fluxkart/docs](https://your-deployed-domain.com/fluxkart/docs).
+
+Swagger provides a user-friendly interface to interact with the API endpoints, view request/response formats, and test the API directly from the browser.
+
