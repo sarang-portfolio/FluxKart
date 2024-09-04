@@ -2,6 +2,10 @@
 
 FluxKart is a Node.js-based backend service designed to identify and track customer identities across multiple purchases. The service uses Express.js, TypeScript, PostgreSQL, and Sequelize as its primary technology stack.
 
+### Live Server
+
+You can access the live version of the application here: [https://fluxkart-y927.onrender.com](https://fluxkart-y927.onrender.com)
+
 ## Tech Stack
 
 - **Node.js**
@@ -98,3 +102,11 @@ The service will return a JSON response similar to the following:
     "secondaryUserIds": [23]
 }
 ```
+
+### Swagger Documentation
+
+To explore the API using Swagger:
+
+- **When running locally:** Use [http://localhost:PORT/fluxkart/docs](http://localhost:PORT/fluxkart/docs). Replace `PORT` with the actual port number defined in your `.env.dev` file.
+- **When using the deployed server:** Use the direct link [https://fluxkart-y927.onrender.com/fluxkart/docs](https://fluxkart-y927.onrender.com/fluxkart/docs).
+
