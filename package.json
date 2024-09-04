@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "cp .env.dev .env && tsnd --respawn --env-file=.env index.ts",
     "start:prod": "cp .env.prod .env && tsnd --respawn --env-file=.env index.ts",
-    "start": "cp .env.dev .env && tsc --project tsconfig.json && sls offline start && node ./build/index"
+    "start": "tsc --project tsconfig.json && node --env-file=.env ./build/index"
   },
   "keywords": [],
   "author": "",
