@@ -13,6 +13,19 @@ export const registerRoutes = (app: Application) => {
     app.use(route.path, route.router);
   }
 
+  app.get("/checkHealthStatus", async (req, res, next) => {
+    try {
+      res.send(
+        new ResponseHandler({
+          statusCode: 200,
+          message: "Health Check Successfull!",
+        })
+      );
+    } catch (error) {
+      next(error);
+    }
+  });
+
   // Global error handler
   app.use((err: any, req: Request, res: Response, next: NextFunction) => {
     res.status(err.statusCode || 500).send(new ResponseHandler(null, err));
