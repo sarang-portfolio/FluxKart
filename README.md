@@ -6,6 +6,11 @@ FluxKart is a Node.js-based backend service designed to identify and track custo
 
 You can access the live version of the application here: [https://fluxkart-y927.onrender.com](https://fluxkart-y927.onrender.com)
 
+### Health Check
+
+To verify that the server is up and running, use the health check route:
+[https://fluxkart-y927.onrender.com/checkHealthStatus](https://fluxkart-y927.onrender.com/checkHealthStatus)
+
 ## Tech Stack
 
 - **Node.js**
